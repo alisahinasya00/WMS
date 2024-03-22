@@ -10,5 +10,6 @@ namespace WMS.DataAccess.Interfaces
 {
     public interface ICalisanRepository : IBaseRepository<Calisan>
     {
+        Task<Calisan> IdGoreGetir(int calisanId, params string[] includeList);
     }
 }

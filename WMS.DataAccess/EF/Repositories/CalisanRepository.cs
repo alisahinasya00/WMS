@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using WMS.DataAccess.EF.Contexts;
@@ -10,11 +12,11 @@ using WMS.Model.Entities;
 
 namespace WMS.DataAccess.EF.Repositories
 {
-    public class RolRepository : BaseRepository<Rol, WMSDbContext>, IRolRepository
+    public class CalisanRepository : BaseRepository<Calisan, WMSDbContext>, ICalisanRepository
     {
-        public async Task<Rol> IdGoreGetir(int rolId, params string[] includeList)
+        public async Task<Calisan> IdGoreGetir(int calisanId, params string[] includeList)
         {
-            return await GetAsync(add => add.RolId == rolId, includeList);
+            return await GetAsync(add => add.CalisanId == calisanId, includeList);
         }
     }
 }
