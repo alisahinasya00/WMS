@@ -1,9 +1,5 @@
 ﻿using Infrastructure.Utilities.ApiResponses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using WMS.Business.Interfaces;
 using WMS.DataAccess.Interfaces;
 using WMS.Model.Entities;
@@ -23,9 +19,9 @@ namespace WMS.Business.Implementations
         {
            
 
-            var calisan = await _repo.GetByIdAsync(id);
+            var calisan = await _repo.IdGoreGetir(id);
             await _repo.DeleteAsync(calisan);
-
+            return ApiResponse<NoData>.Success(StatusCodes.Status200OK);
         }
 
         public Task<ApiResponse<List<Calisan>>> IdGoreCalisanGetir(params string[] includelist)
