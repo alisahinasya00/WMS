@@ -12,7 +12,7 @@ namespace WMS.DataAccess.EF.Contexts
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=.\SQLEXPRESS;database=FoodDeliveryDB;trusted_connection=true;");
+            optionsBuilder.UseSqlServer(@"server=.\SQLEXPRESS;database=WMS_DB;trusted_connection=true;");
         }
 
         public DbSet<Calisan> Calisanlar { get; set; }
