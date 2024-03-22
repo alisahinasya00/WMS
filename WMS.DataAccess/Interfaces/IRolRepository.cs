@@ -10,6 +10,6 @@ namespace WMS.DataAccess.Interfaces
 {
     public interface IRolRepository : IBaseRepository<Rol>
     {
-        Task<Rol> IdGoreGetir (int rolId,params string[] includeList);
+        Task <List<Rol>> IdGoreGetir (int rolId,params string[] includeList);
     }
 }
