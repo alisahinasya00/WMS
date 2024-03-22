@@ -10,5 +10,6 @@ namespace WMS.DataAccess.Interfaces
 {
     public interface ICalisanRepository : IBaseRepository<Calisan>
     {
+
     }
 }

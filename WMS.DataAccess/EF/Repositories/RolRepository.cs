@@ -12,9 +12,9 @@ namespace WMS.DataAccess.EF.Repositories
 {
     public class RolRepository : BaseRepository<Rol, WMSDbContext>, IRolRepository
     {
-        public Task<List<Rol>> IdGoreGetir(int rolId, params string[] includeList)
+        public async Task<Rol> IdGoreGetir(int rolId, params string[] includeList)
         {
-            return GetAsync(add => add.RolId == rolId, includeList);
+            return await GetAsync(add => add.RolId == rolId, includeList);
         }
     }
 }
