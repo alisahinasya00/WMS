@@ -11,4 +11,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WMS.Business\WMS.Business.csproj" />
+    <ProjectReference Include="..\WMS.Model\WMS.Model.csproj" />
+  </ItemGroup>
+
 </Project>
