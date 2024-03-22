@@ -17,16 +17,18 @@ namespace WMS.Business.Implementations
 
         public async Task<ApiResponse<NoData>> DeleteAsync(int id)
         {
-           
 
             var calisan = await _repo.IdGoreGetir(id);
             await _repo.DeleteAsync(calisan);
             return ApiResponse<NoData>.Success(StatusCodes.Status200OK);
         }
 
+
+
         public Task<ApiResponse<List<Calisan>>> IdGoreCalisanGetir(params string[] includelist)
         {
             throw new NotImplementedException();
         }
+
     }
 }
