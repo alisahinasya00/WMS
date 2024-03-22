@@ -10,4 +10,13 @@
     <ProjectReference Include="..\WMS.Model\WMS.Model.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="EF\Repositories\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+  </ItemGroup>
+
 </Project>
