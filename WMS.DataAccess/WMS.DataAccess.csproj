@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="EF\Contexts\" />
     <Folder Include="EF\Repositories\" />
     <Folder Include="Interfaces\" />
   </ItemGroup>
