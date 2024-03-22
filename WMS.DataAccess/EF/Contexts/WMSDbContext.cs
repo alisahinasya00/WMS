@@ -11,7 +11,7 @@ namespace WMS.DataAccess.EF.Contexts
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=.\SQLEXPRESS;database=FoodDeliveryDB;trusted_connection=true;");a
+            optionsBuilder.UseSqlServer(@"server=.\SQLEXPRESS;database=FoodDeliveryDB;trusted_connection=true;");
         }
     }
 }
