@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infrastructure.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace WMS.Model.Entities
 {
-    public class Calisan
+    public class Calisan : IEntity
     {
         public int CalisanId { get; set; }
         public string Adi { get; set; }
