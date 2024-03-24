@@ -25,5 +25,12 @@ namespace WMS.WebAPI.Controllers
             return await SendResponseAsync(response);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> GetRoller()
+        {
+            var response = await _rolBs.GetRolesAsync();
+            return await SendResponseAsync(response);
+        }
+
     }
 }

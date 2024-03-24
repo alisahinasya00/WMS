@@ -1,7 +1,10 @@
 using WMS.Business.Implementations;
 using WMS.Business.Interfaces;
+using WMS.Business.Profiles;
 using WMS.DataAccess.EF.Repositories;
 using WMS.DataAccess.Interfaces;
+using WMS.Business;
+using System.Text.Json.Serialization;
 
 namespace WMS.WebAPI
 {
@@ -10,6 +13,9 @@ namespace WMS.WebAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddControllers().
+                AddJsonOptions(opt => opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+            builder.Services.AddBusinessServices();
 
             // Add services to the container.
             builder.Services.AddControllers();
