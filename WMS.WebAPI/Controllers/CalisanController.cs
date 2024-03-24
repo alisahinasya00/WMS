@@ -18,7 +18,7 @@ namespace WMS.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetCalisanlar()
         {
-            var response = await _calisanBs.GetCalisanlarAsync();
+            var response = await _calisanBs.GetCalisanlarAsync("Rol");
             return await SendResponseAsync(response);
         }
     }

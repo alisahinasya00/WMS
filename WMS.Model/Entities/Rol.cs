@@ -12,6 +12,6 @@ namespace WMS.Model.Entities
         public int RolId { get; set; }
         public string RolAdi { get; set; }
 
-        public List <Calisan> Calisanlar { get; set; }
+        public List<Calisan>? Calisanlar { get; set; }
     }
 }
