@@ -17,8 +17,4 @@
     <ProjectReference Include="..\WMS.Model\WMS.Model.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

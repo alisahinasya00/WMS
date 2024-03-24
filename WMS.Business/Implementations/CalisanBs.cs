@@ -30,5 +30,14 @@ namespace WMS.Business.Implementations
             throw new NotImplementedException();
         }
 
+        public Task<ApiResponse<List<Calisan>>> IsimGoreCalisanGetir(params string[] includelist)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ApiResponse<List<Calisan>>> RolGoreCalisanGetir(params string[] includelist)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -11,6 +11,9 @@ namespace WMS.Business.Interfaces
     public interface ICalisanBs
     {
         Task<ApiResponse<List<Calisan>>> IdGoreCalisanGetir(params string[] includelist);
+        Task<ApiResponse<List<Calisan>>> IsimGoreCalisanGetir(params string[] includelist);
+        Task<ApiResponse<List<Calisan>>> RolGoreCalisanGetir(params string[] includelist);
+
 
     }
 }
