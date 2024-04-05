@@ -1,8 +1,5 @@
-﻿using Infrastructure.Utilities.ApiResponses;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using WMS.Business.Interfaces;
-using WMS.Model.Dtos.Calisan;
 
 namespace WMS.WebAPI.Controllers
 {
