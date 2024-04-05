@@ -40,19 +40,29 @@ namespace WMS.Business.Implementations
             throw new NotFoundException("İçerik Bulunamadı");
         }
 
-        public Task<ApiResponse<List<Calisan>>> IdGoreCalisanGetir(params string[] includelist)
+        public async Task<ApiResponse<List<CalisanGetDto>>> IsimGoreCalisanGetirAsync(string adi, params string[] includeList)
         {
-            throw new NotImplementedException();
+            if (adi.Length < 2)
+                throw new BadRequestException("İsim en az 3 harften oluşmalıdır");
+
+            var calisanlar = await _repo.IsmeGoreGetir(adi, includeList);
+            if (calisanlar.Count > 0 && calisanlar != null)
+            {
+                var returnList = _mapper.Map<List<CalisanGetDto>>(calisanlar);
+                return ApiResponse<List<CalisanGetDto>>.Success(StatusCodes.Status200OK, returnList);
+            }
+            throw new NotFoundException("İçerik Bulunamadı");
         }
 
-        public Task<ApiResponse<List<Calisan>>> IsimGoreCalisanGetir(params string[] includelist)
+        public async Task<ApiResponse<List<CalisanGetDto>>> RoleGoreCalisanGetirAsync(int rol,params string[] includeList)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<ApiResponse<List<Calisan>>> RolGoreCalisanGetir(params string[] includelist)
-        {
-            throw new NotImplementedException();
+            var calisanlar = await _repo.RoleGoreGetir(rol, includeList);
+            if (calisanlar.Count > 0)
+            {
+                var returnList = _mapper.Map<List<CalisanGetDto>>(calisanlar);
+                return ApiResponse<List<CalisanGetDto>>.Success(StatusCodes.Status200OK, returnList);
+            }
+            throw new NotFoundException("İçerik Bulunamadı");
         }
     }
 }

@@ -18,5 +18,15 @@ namespace WMS.DataAccess.EF.Repositories
         {
             return await GetAsync(add => add.CalisanId == calisanId, includeList);
         }
+
+        public async Task<List<Calisan>> IsmeGoreGetir(string adi, params string[] includeList)
+        {
+            return await GetAllAsync(add => add.Adi == adi, includeList);
+        }
+
+        public async Task<List<Calisan>> RoleGoreGetir(int rol, params string[] includeList)
+        {
+            return await GetAllAsync(add => add.RolId == rol, includeList);
+        }
     }
 }
