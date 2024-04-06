@@ -21,7 +21,7 @@ namespace WMS.Business.Implementations
             _mapper = mapper;
         }
 
-        public async Task<ApiResponse<RolGetDto>> IdGoreRolGetir(int rolId, params string[] includeList)
+        public async Task<ApiResponse<RolGetDto>> IdGoreRolGetirAsync(int rolId, params string[] includeList)
         {
             if (rolId <= 0)
                 throw new BadRequestException("id değeri 0 dan büyük olmalıdır");

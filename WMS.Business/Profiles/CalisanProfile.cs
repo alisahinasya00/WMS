@@ -11,6 +11,10 @@ namespace WMS.Business.Profiles
             CreateMap<Calisan, CalisanGetDto>()
                 .ForMember(dest => dest.RolAdi,
                        opt => opt.MapFrom(src => src.Rol.RolAdi));
+
+            CreateMap<CalisanPutDto, Calisan>();
+            CreateMap<CalisanPostDto, Calisan>();
         }
+       
     }
 }

@@ -21,7 +21,7 @@ namespace WMS.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> IdGoreGetir([FromRoute] int id)
         {
-            var response = await _rolBs.IdGoreRolGetir(id);
+            var response = await _rolBs.IdGoreRolGetirAsync(id);
             return await SendResponseAsync(response);
         }
 

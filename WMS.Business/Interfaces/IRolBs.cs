@@ -5,7 +5,7 @@ namespace WMS.Business.Interfaces
 {
     public interface IRolBs
     {
-        Task<ApiResponse<RolGetDto>> IdGoreRolGetir(int rolId, params string[] includeList);
+        Task<ApiResponse<RolGetDto>> IdGoreRolGetirAsync(int rolId, params string[] includeList);
         Task<ApiResponse<List<RolGetDto>>> GetRolesAsync(params string[] includeList);
 
 
