@@ -7,5 +7,10 @@
 
 
 
+        public Konum? Konum { get; set; }  // Buraya Dikkat 
+        public List<Raf>? Raflar { get; set; }
+        public List<Bolme>? Bolmeler { get; set; }
+       
+
     }
 }

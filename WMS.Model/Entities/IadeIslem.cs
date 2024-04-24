@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WMS.Model.Entities
+﻿namespace WMS.Model.Entities
 {
     public class IadeIslem
     {
@@ -15,6 +9,13 @@ namespace WMS.Model.Entities
         public int CalisanID { get; set; }
         public int UrunAdedi { get;set;}
         public DateTime IslemTarihi { get; set; }
-        public string IadeDurumu { get; set; }
+        public string? IadeDurumu { get; set; }
+
+
+        public Calisan? Calisan { get; set; }
+        public Magaza? Magaza { get; set; }
+        public Urun? Urun { get; set; }
+        public IslemTuru? IslemTuru { get; set; }
+
     }
 }

@@ -11,5 +11,7 @@ namespace WMS.Model.Entities
         public int FabrikaId { get; set; }
         public string Adres { get; set; }
         public string TelefonNo { get; set;}
+
+        public List<GirisIslem> GirisIslemler { get; set; }
     }
 }
