@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <Folder Include="Dtos\IadeIslem\" />
+    <Folder Include="Dtos\Islem\" />
   </ItemGroup>
 
 </Project>
