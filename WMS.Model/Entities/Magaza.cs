@@ -15,8 +15,8 @@ namespace WMS.Model.Entities
         public string TelefonNo { get; set; }
         public string Mail { get; set;}
         public string Sifre {get; set;}
-        //public List<IadeIslem>? IadeIslemler { get; set; }
-        //public List<CikisIslem>? CikisIslemler { get; set; }
+        public List<IadeIslem>? IadeIslemler { get; set; }
+        public List<CikisIslem>? CikisIslemler { get; set; }
 
     }
 }

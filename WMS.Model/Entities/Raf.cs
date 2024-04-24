@@ -5,5 +5,8 @@
         public int RafId { get; set; }
         public int BlokID { get; set; }
         public string? RafAdi { get; set; }
+        public List<Bolme>? Bolmeler { get; set; }
+        public Blok Blok { get; set; }
+        public Konum Konum { get; set; }
     }
 }

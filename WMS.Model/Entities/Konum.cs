@@ -6,11 +6,11 @@
         public int BlokID { get; set; }
         public int RafID { get; set; }
         public int BolmeID { get; set;}
-        public int UrunID { get; set; }
 
-        
-
-
+        public Bolme Bolme { get; set; }
+        public List<Blok>? Bloklar { get; set; }
+        public List<Raf>? Raflar { get; set; }
+        public Urun Urun { get; set; }
 
 
 
