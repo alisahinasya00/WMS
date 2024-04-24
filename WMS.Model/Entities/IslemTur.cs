@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WMS.Model.Entities
 {
-    public class IslemTuru
+    public class IslemTur
     {
         public int IslemTurId { get; set; }
         public string IslemAdi { get; set; }

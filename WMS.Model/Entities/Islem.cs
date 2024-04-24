@@ -12,7 +12,7 @@ namespace WMS.Model.Entities
         public int IslemTurID { get; set; }
         public DateTime IslemTarihi { get; set;}
 
-        public IslemTuru IslemTuru { get; set; }
+        public IslemTur IslemTur { get; set; }
 
     }
 }
