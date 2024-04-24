@@ -19,7 +19,7 @@ namespace WMS.DataAccess.EF.Contexts
         public DbSet<CikisIslem> CikisIslemler { get; set; }
         public DbSet<IadeIslem> IadeIslemler { get; set; }
         public DbSet<Islem> Islemler { get; set; }
-        public DbSet<IslemTuru> IslemTurleri { get; set; }
+        public DbSet<IslemTur> IslemTurler { get; set; }
         public DbSet<Kategori> Kategoriler { get; set; }
         public DbSet<Konum> Konumlar { get; set; }
         public DbSet<Magaza> Magazalar { get; set; }
