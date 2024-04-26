@@ -16,7 +16,6 @@
 
   <ItemGroup>
     <Folder Include="Dtos\IadeIslem\" />
-    <Folder Include="Dtos\Blok\" />
     <Folder Include="Dtos\Bolme\" />
     <Folder Include="Dtos\CikisIslem\" />
     <Folder Include="Dtos\GirisIslem\" />
