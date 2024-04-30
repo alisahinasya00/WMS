@@ -1,6 +1,8 @@
-﻿namespace WMS.Model.Entities
+﻿using Infrastructure.Model;
+
+namespace WMS.Model.Entities
 {
-    public class Konum
+    public class Konum : IEntity
     {
         public int KonumId { get; set; }
         public int BlokID { get; set; }

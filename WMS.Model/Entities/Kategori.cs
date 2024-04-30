@@ -1,6 +1,8 @@
-﻿namespace WMS.Model.Entities
+﻿using Infrastructure.Model;
+
+namespace WMS.Model.Entities
 {
-    public class Kategori
+    public class Kategori : IEntity
     {
         public int KategoriId { get; set; }
         public string? KategoriAdi { get; set;}
