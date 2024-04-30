@@ -1,16 +1,9 @@
 ﻿using AutoMapper;
-using Infrastructure.Model;
 using Infrastructure.Utilities.ApiResponses;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WMS.Business.CustomExceptions;
 using WMS.Business.Interfaces;
 using WMS.DataAccess.Interfaces;
-using WMS.Model.Dtos.Blok;
 using WMS.Model.Dtos.Urun;
 using WMS.Model.Entities;
 
@@ -87,21 +80,24 @@ namespace WMS.Business.Implementations
             throw new NotFoundException("İçerik Bulunamadı");
         }
 
-        public Task<ApiResponse<List<UrunGetDto>>> KayitTariheGoreUrunGetirAsync(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList)
+        public async Task<ApiResponse<List<UrunGetDto>>> KayitTariheGoreUrunGetirAsync(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList)
         {
-            throw new NotImplementedException();
+            var kayitTarihi = await _repo.KayitTariheGoreGetir(baslangicTarihi, bitisTarihi);
+            if (kayitTarihi.Count > 0 && kayitTarihi != null)
+            {
+                var returnList = _mapper.Map<List<UrunGetDto>>(kayitTarihi);
+                return ApiResponse<List<UrunGetDto>>.Success(StatusCodes.Status200OK, returnList);
+            }
+            throw new NotFoundException("İçerik Bulunamadı");
         }
 
-        public Task<ApiResponse<NoData>> UpdateAsync(UrunPutDto entity)
+        public async Task<ApiResponse<NoData>> UpdateAsync(UrunPutDto dto)
         {
             if (dto == null)
                 throw new BadRequestException("Güncellenecek ürün bilgisi girmelisiniz..");
 
-            if (dto.BlokAdi.Length < 2)
-                throw new BadRequestException("Blok ismi en az 3 harften oluşmalıdır..");
-
-            var blok = _mapper.Map<Blok>(dto);
-            await _repo.UpdateAsync(blok);
+            var urun = _mapper.Map<Urun>(dto);
+            await _repo.UpdateAsync(urun);
             return ApiResponse<NoData>.Success(StatusCodes.Status200OK);
         }
     }
