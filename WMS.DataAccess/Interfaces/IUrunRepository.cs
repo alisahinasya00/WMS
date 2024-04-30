@@ -12,7 +12,7 @@ namespace WMS.DataAccess.Interfaces
     {
         Task<Urun> IdGoreGetir(int urunId, params string[] includeList);
         Task<List<Urun>> IsmeGoreGetir(string adi, params string[] includeList);
-        Task<List<Urun>> KategoriyeGoreGetir(int kategoriId, params string[] includeList);
+        Task<List<Urun>> KategoriyeGoreGetir(string kategoriAdi, params string[] includeList);
         Task<List<Urun>> KonumaGoreGetir(int konumId, params string[] includeList);
         Task<List<Urun>> KayıtTariheGoreGetir(DateTime baslangıcTarihi, DateTime bitisTarihi,  params string[] includeList);
 

@@ -10,8 +10,8 @@ namespace WMS.DataAccess.Interfaces
     public interface IKonumRepository
     {
         Task<Konum> IdGoreGetir(int konumId, params string[] includeList);
-        Task<List<Konum>> BlokaGoreGetir(int blokId, params string[] includeList);
-        Task<List<Konum>> RafaGoreGetir(int rafId, params string[] includeList);
-        Task<List<Konum>> BolmeyeGoreGetir(int bolmeId, params string[] includeList);
+        Task<List<Konum>> BlokaGoreGetir(string blokAdi, params string[] includeList);
+        Task<List<Konum>> RafaGoreGetir(string rafAdi, params string[] includeList);
+        Task<List<Konum>> BolmeyeGoreGetir(string bolmeAdi, params string[] includeList);
     }
 }

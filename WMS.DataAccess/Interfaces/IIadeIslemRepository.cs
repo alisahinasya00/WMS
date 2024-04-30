@@ -12,14 +12,14 @@ namespace WMS.DataAccess.Interfaces
     {
         Task<IadeIslem> IdGoreGetir(int iadeIslemId, params string[] includeList);
 
-        Task<List<IadeIslem>> UrunIdGoreGetir(int urunId, params string[] includeList);
+        Task<List<IadeIslem>> UrunAdaGoreGetir(string urunAdi, params string[] includeList);
 
-        Task<List<IadeIslem>> IslemTuruIdGoreGetir(int islemTurId, params string[] includeList);
+        Task<List<IadeIslem>> IslemTuruAdaGoreGetir(string islemTurAdi, params string[] includeList);
 
-        Task<List<IadeIslem>> MagazaIdGoreGetir(int magazaId, params string[] includeList);
+        Task<List<IadeIslem>> MagazaAdiGoreGetir(string magazaAdi, params string[] includeList);
 
         Task<List<IadeIslem>> TariheGoreGetir(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList);
 
-        Task<List<IadeIslem>> CalisanIdGoreGetir(int calisanId, params string[] includeList);
+        Task<List<IadeIslem>> CalisanAdaGoreGetir(string calisanAdi, params string[] includeList);
     }
 }

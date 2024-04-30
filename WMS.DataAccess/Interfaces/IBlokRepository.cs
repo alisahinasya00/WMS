@@ -11,6 +11,6 @@ namespace WMS.DataAccess.Interfaces
     public interface IBlokRepository : IBaseRepository<Blok>
     {
         Task<Blok> IdGoreGetir(int blokId, params string[] includeList);
-        Task<List<Blok>> IsmeGoreGetir(string adi, params string[] includeList);
+        Task<List<Blok>> IsmeGoreGetir(string blokadi, params string[] includeList);
     }
 }

@@ -13,7 +13,7 @@ namespace WMS.DataAccess.Interfaces
         Task<Islem> IdGoreGetir(int islemId, params string[] includeList);
         Task<List<Islem>> TariheGoreGetir (DateTime baslangicTarihi, DateTime bitisTarihi , params string[] includeList);
 
-        Task<List<Islem>> TurIdGoreGetir (int turId,  params string[] includeList);
+        Task<List<Islem>> TurAdaGoreGetir (string turAdi,  params string[] includeList);
 
     }
 }
