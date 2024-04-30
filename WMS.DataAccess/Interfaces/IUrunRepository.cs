@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WMS.DataAccess.Interfaces
 {
-    internal class IUrunRepository
+    public interface IUrunRepository
     {
     }
 }

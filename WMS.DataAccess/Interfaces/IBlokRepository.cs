@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WMS.DataAccess.Interfaces
 {
-    internal class IBlokRepository
+    public interface IBlokRepository
     {
     }
 }
