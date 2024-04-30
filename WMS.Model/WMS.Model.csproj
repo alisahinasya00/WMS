@@ -14,17 +14,4 @@
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dtos\IadeIslem\" />
-    <Folder Include="Dtos\GirisIslem\" />
-    <Folder Include="Dtos\Fabrika\" />
-    <Folder Include="Dtos\Islem\" />
-    <Folder Include="Dtos\Kategori\" />
-    <Folder Include="Dtos\Konum\" />
-    <Folder Include="Dtos\Magaza\" />
-    <Folder Include="Dtos\Raf\" />
-    <Folder Include="Dtos\Urun\" />
-    <Folder Include="Dtos\IslemTur\" />
-  </ItemGroup>
-
 </Project>

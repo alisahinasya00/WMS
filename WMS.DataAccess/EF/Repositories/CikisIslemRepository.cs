@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WMS.DataAccess.EF.Repositories
 {
-    internal class CikisIslemRepository
+    public class CikisIslemRepository
     {
     }
 }
