@@ -1,12 +1,10 @@
 ﻿using AutoMapper;
-using Infrastructure.Model;
 using Infrastructure.Utilities.ApiResponses;
 using Microsoft.AspNetCore.Http;
 using WMS.Business.CustomExceptions;
 using WMS.Business.Interfaces;
 using WMS.DataAccess.Interfaces;
 using WMS.Model.Dtos.Calisan;
-using WMS.Model.Dtos.Rol;
 using WMS.Model.Entities;
 
 namespace WMS.Business.Implementations

@@ -20,7 +20,7 @@ namespace Infrastructure.Utilities.ApiResponses
                 Data = data
             };
         }
-        public static ApiResponse<T> Success(int statusCode)
+        public static ApiResponse<T> Success(int statusCode, global::WMS.Model.Entities.Islem insertedIslem)
         {
             return new ApiResponse<T>
             {
@@ -46,6 +46,9 @@ namespace Infrastructure.Utilities.ApiResponses
             };
         }
 
-
+        public static ApiResponse<NoData> Success(int status200OK)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
