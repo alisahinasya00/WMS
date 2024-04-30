@@ -1,6 +1,8 @@
-﻿namespace WMS.Model.Entities
+﻿using Infrastructure.Model;
+
+namespace WMS.Model.Entities
 {
-    public class Blok
+    public class Blok : IEntity
     {
         public int BlokId { get; set; }
         public string? BlokAdi { get; set; }

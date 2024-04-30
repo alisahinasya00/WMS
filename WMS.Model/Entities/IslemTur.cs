@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infrastructure.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WMS.Model.Entities
 {
-    public class IslemTur
+    public class IslemTur : IEntity
     {
         public int IslemTurId { get; set; }
         public string IslemAdi { get; set; }

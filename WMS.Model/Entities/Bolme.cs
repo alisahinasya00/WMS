@@ -1,6 +1,8 @@
-﻿namespace WMS.Model.Entities
+﻿using Infrastructure.Model;
+
+namespace WMS.Model.Entities
 {
-    public class Bolme
+    public class Bolme: IEntity
     {
         public int BolmeId { get; set; }
         public int BlokID { get; set; }

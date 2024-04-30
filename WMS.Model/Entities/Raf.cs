@@ -1,6 +1,8 @@
-﻿namespace WMS.Model.Entities
+﻿using Infrastructure.Model;
+
+namespace WMS.Model.Entities
 {
-    public class Raf
+    public class Raf : IEntity
     {
         public int RafId { get; set; }
         public int BlokID { get; set; }
