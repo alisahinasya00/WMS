@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Infrastructure.Model;
 using Infrastructure.Utilities.ApiResponses;
 using Microsoft.AspNetCore.Http;
 using WMS.Business.CustomExceptions;
@@ -6,6 +7,7 @@ using WMS.Business.Interfaces;
 using WMS.DataAccess.Interfaces;
 using WMS.Model.Dtos.Calisan;
 using WMS.Model.Dtos.IadeIslem;
+using WMS.Model.Dtos.Islem;
 using WMS.Model.Entities;
 
 namespace WMS.Business.Implementations
@@ -69,14 +71,25 @@ namespace WMS.Business.Implementations
             return ApiResponse<IadeIslem>.Success(StatusCodes.Status201Created, insertedIadeIslem);
         }
 
-        public Task<ApiResponse<List<IadeIslemGetDto>>> TariheGoreIadeIslemGetirAsync(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList)
+        public async Task<ApiResponse<List<IadeIslemGetDto>>> TariheGoreIadeIslemGetirAsync(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList)
         {
-            throw new NotImplementedException();
+            var islem = await _repo.TariheGoreGetir(baslangicTarihi, bitisTarihi);
+            if (islem.Count > 0 && islem != null)
+            {
+                var returnList = _mapper.Map<List<IadeIslemGetDto>>(islem);
+                return ApiResponse<List<IadeIslemGetDto>>.Success(StatusCodes.Status200OK, returnList);
+            }
+            throw new NotFoundException("İçerik Bulunamadı");
         }
 
-        public Task<ApiResponse<NoData>> UpdateAsync(IadeIslemPutDto entity)
+        public async Task<ApiResponse<NoData>> UpdateAsync(IadeIslemPutDto dto)
         {
-            throw new NotImplementedException();
+            if (dto == null)
+                throw new BadRequestException("Güncellenecek iade işlem bilgisi girmelisiniz..");
+
+            var iadeIslem = _mapper.Map<IadeIslem>(dto);
+            await _repo.UpdateAsync(iadeIslem);
+            return ApiResponse<NoData>.Success(StatusCodes.Status200OK);
         }
     }
 }

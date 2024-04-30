@@ -6,7 +6,7 @@ namespace WMS.Business.Interfaces
 {
     public interface ICikisIslemBs
     {
-        Task<ApiResponse<CikisIslemGetDto>> IdGoreCikisIslemGetirAsync(int CikisIslemId, params string[] includeList);
+        Task<ApiResponse<CikisIslemGetDto>> IdGoreCikisIslemGetirAsync(int cikisIslemId, params string[] includeList);
         Task<ApiResponse<List<CikisIslemGetDto>>> TariheGoreCikisIslemGetirAsync(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList);
         Task<ApiResponse<List<CikisIslemGetDto>>> GetCikisIslemlerAsync(params string[] includeList);
         
