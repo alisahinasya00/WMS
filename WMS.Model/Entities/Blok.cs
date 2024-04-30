@@ -1,4 +1,6 @@
-﻿namespace WMS.Model.Entities
+﻿using Infrastructure.Model;
+
+namespace WMS.Model.Entities
 {
     public class Blok
     {
