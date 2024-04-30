@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Infrastructure.DataAccess.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using WMS.Model.Entities;
 
 namespace WMS.DataAccess.Interfaces
 {
-    public interface IKonumRepository
+    public interface IKonumRepository : IBaseRepository<Konum>
     {
         Task<Konum> IdGoreGetir(int konumId, params string[] includeList);
 
