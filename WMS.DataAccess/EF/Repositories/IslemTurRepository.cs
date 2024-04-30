@@ -17,5 +17,7 @@ namespace WMS.DataAccess.EF.Repositories
             return await GetAsync(islemTur => islemTur.IslemTurId == islemTurId, includeList);
 
         }
+
+        
     }
 }
