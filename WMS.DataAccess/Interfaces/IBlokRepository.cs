@@ -12,5 +12,6 @@ namespace WMS.DataAccess.Interfaces
     {
         Task<Blok> IdGoreGetir(int blokId, params string[] includeList);
         Task<List<Blok>> IsmeGoreGetir(string blokadi, params string[] includeList);
+        Task UpdateAsync(Calisan blok);
     }
 }
