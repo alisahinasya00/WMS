@@ -11,7 +11,6 @@ namespace WMS.DataAccess.Interfaces
     {
         Task<Bolme> IdGoreGetir(int bolmeId, params string[] includeList);
         Task<List<Bolme>> IsmeGoreGetir(string adi, params string[] includeList);
-        Task<List<Bolme>> BlokAdaGoreGetir(string blokAdi, params string[] includeList);
-        Task<List<Bolme>> RafAdaGoreGetir(string rafAdi, params string[] includeList);
+   
     }
 }
