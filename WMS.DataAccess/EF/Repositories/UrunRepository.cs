@@ -17,7 +17,7 @@ namespace WMS.DataAccess.EF.Repositories
             return await GetAllAsync(prd => prd.Adi.Contains(adi), includeList);
         }
 
-        public async Task<List<Urun>> KayıtTariheGoreGetir(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList)
+        public async Task<List<Urun>> KayitTariheGoreGetir(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList)
         {
             return await GetAllAsync(cikisIslem => cikisIslem.KayıtTarihi >= baslangicTarihi && cikisIslem.KayıtTarihi <= bitisTarihi, includeList);
         }
