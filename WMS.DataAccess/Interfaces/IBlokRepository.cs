@@ -10,6 +10,7 @@ namespace WMS.DataAccess.Interfaces
 {
     public interface IBlokRepository : IBaseRepository<Blok>
     {
+        
 
     }
 }
