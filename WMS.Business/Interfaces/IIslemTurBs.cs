@@ -13,7 +13,6 @@ namespace WMS.Business.Interfaces
     public interface IIslemTurBs
     {
         Task<ApiResponse<IslemTurGetDto>> IdGoreIslemTurGetirAsync(int IslemTurId, params string[] includeList);
-        Task<ApiResponse<List<IslemTurGetDto>>> TariheGoreIslemTurGetir (DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList);
         Task<ApiResponse<List<IslemTurGetDto>>> GetIslemTurlerAsync(params string[] includeList);
         Task<ApiResponse<IslemTur>> InsertAsync(IslemTurPostDto dto);
         Task<ApiResponse<NoData>> UpdateAsync(IslemTurPutDto entity);

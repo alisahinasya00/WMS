@@ -11,5 +11,6 @@ namespace WMS.DataAccess.Interfaces
     public interface IIslemTurRepository : IBaseRepository<IslemTur>
     {
         Task<IslemTur> IdGoreGetir(int islemTurId, params string[] includeList);
+        
     }
 }

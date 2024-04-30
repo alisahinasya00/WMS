@@ -9,7 +9,7 @@ using WMS.Model.Entities;
 
 namespace WMS.Business.Interfaces
 {
-    public interface IGirisIslemlerBs
+    public interface IGirisIslemBs
     {
         Task<ApiResponse<GirisIslemGetDto>> IdGoreGirisİslemGetir(int girisIslemid, params string[] includeList);
         Task<ApiResponse<List<GirisIslemGetDto>>> TariheGoreGirisİslemGetir(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList);
