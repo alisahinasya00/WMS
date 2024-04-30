@@ -1,6 +1,8 @@
-﻿namespace WMS.Model.Entities
+﻿using Infrastructure.Model;
+
+namespace WMS.Model.Entities
 {
-    public class GirisIslem
+    public class GirisIslem : IEntity
     {
         public int GirisIslemId { get; set; }
         public int UrunID { get; set; }
