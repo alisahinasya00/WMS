@@ -9,7 +9,7 @@ namespace WMS.DataAccess.EF.Repositories
     {
         public  async Task<Urun> IdGoreGetir(int urunId, params string[] includeList)
         {
-            return await GetAsync(urun => urun.UrunId == urunId ,includeList)
+            return await GetAsync(urun => urun.UrunId == urunId, includeList);
         }
 
         public async Task<List<Urun>> IsmeGoreGetir(string adi, params string[] includeList)
@@ -17,9 +17,9 @@ namespace WMS.DataAccess.EF.Repositories
             return await GetAllAsync(prd => prd.Adi.Contains(adi), includeList);
         }
 
-        public Task<List<Urun>> KayıtTariheGoreGetir(DateTime baslangıcTarihi, DateTime bitisTarihi, params string[] includeList)
+        public async Task<List<Urun>> KayıtTariheGoreGetir(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList)
         {
-            throw new NotImplementedException();
+            return await GetAllAsync(cikisIslem => cikisIslem.KayıtTarihi >= baslangicTarihi && cikisIslem.KayıtTarihi <= bitisTarihi, includeList);
         }
 
        
