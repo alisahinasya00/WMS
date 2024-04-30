@@ -11,7 +11,7 @@ namespace WMS.DataAccess.Interfaces
     public interface IMagazaRepository : IBaseRepository<Magaza>
     {
         Task<Magaza> IdGoreGetir(int magazaId, params string[] includeList);
-        Task<Magaza> AdaGoreGetir(string magazaAdi, params string[] includeList);
-        Task<Magaza> AdreseGoreGetir (string adres, params string[] includeList);
+        Task<List<Magaza>> AdaGoreGetir(string magazaAdi, params string[] includeList);
+        Task<List<Magaza>> AdreseGoreGetir (string adres, params string[] includeList);
     }
 }

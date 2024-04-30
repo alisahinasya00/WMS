@@ -12,7 +12,6 @@ namespace WMS.DataAccess.Interfaces
     {
         Task<IadeIslem> IdGoreGetir(int iadeIslemId, params string[] includeList);
 
-        
         Task<List<IadeIslem>> TariheGoreGetir(DateTime baslangicTarihi, DateTime bitisTarihi, params string[] includeList);
 
     }
