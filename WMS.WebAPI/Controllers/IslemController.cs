@@ -55,6 +55,17 @@ namespace WMS.WebAPI.Controllers
             return await SendResponseAsync(response);
         }
 
-       
+        [HttpPost]
+        public async Task<IActionResult> SaveNewIslem([FromBody] IslemPostDto dto)
+        {
+            var response = await _islemBs.InsertAsync(dto);
+            if (response.ErrorMessages != null && response.ErrorMessages.Count > 0)
+            {
+                return await SendResponseAsync(response);
+            }
+            else
+                return CreatedAtAction(nameof(IdGoreGetir), new { id = response.Data.IslemTurID }, response.Data);
+
+        }
     }
 }
