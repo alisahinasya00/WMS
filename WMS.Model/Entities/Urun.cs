@@ -12,11 +12,13 @@ namespace WMS.Model.Entities
         public int KonumID { get; set; }
 
 
-        public List<IadeIslem>? IadeIslemler { get; set; }
+       // public List<IadeIslem>? IadeIslemler { get; set; }
+        public IadeIslem IadeIslem { get; set; }
         public Kategori? Kategori { get; set; }
-        public List<CikisIslem>? CikisIslemler { get; set; }
-        public List<GirisIslem>? GirisIslemler { get; set; }
-
+        //public List<CikisIslem>? CikisIslemler { get; set; }
+        //public List<GirisIslem>? GirisIslemler { get; set; }
+        public CikisIslem CikisIslem { get; set; }
+        public GirisIslem GirisIslem { get; set; }
 
     }
 }
