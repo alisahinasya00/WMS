@@ -20,7 +20,7 @@ namespace WMS.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetBolmeler()
         {
-            var response = await _bolmeBs.GetBolmelerAsync();
+            var response = await _bolmeBs.GetBolmelerAsync("Blok","Raf");
             return await SendResponseAsync(response);
         }
 
@@ -28,14 +28,14 @@ namespace WMS.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> IdGoreGetir([FromRoute] int id)
         {
-            var response = await _bolmeBs.IdGoreBolmeGetirAsync(id);
+            var response = await _bolmeBs.IdGoreBolmeGetirAsync(id, "Blok", "Raf");
             return await SendResponseAsync(response);
         }
 
         [HttpGet("İsim")]
         public async Task<IActionResult> IsmeGoreGetir([FromQuery] string isim)
         {
-            var response = await _bolmeBs.IsimGoreBolmeGetirAsync(isim);
+            var response = await _bolmeBs.IsimGoreBolmeGetirAsync(isim, "Blok", "Raf");
             return await SendResponseAsync(response);
         }
 
