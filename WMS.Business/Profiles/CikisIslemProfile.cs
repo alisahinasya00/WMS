@@ -11,7 +11,7 @@ namespace WMS.Business.Profiles
                 .ForMember(dest => dest.UrunAdi,
                        opt => opt.MapFrom(src => src.Urun.Adi))
                 .ForMember(dest => dest.IslemAdi,
-                       opt => opt.MapFrom(src => src.IslemTur.IslemAdi))
+                       opt => opt.MapFrom(src => src.IslemTuru.IslemAdi))
                 .ForMember(dest => dest.MagazaAdi,
                        opt => opt.MapFrom(src => src.Magaza.MagazaAdi))
                 .ForMember(dest => dest.CalisanAdi,
