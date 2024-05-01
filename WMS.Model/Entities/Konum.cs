@@ -10,8 +10,8 @@ namespace WMS.Model.Entities
         public int BolmeID { get; set;}
 
         public Bolme Bolme { get; set; }
-        public List<Blok>? Bloklar { get; set; }
-        public List<Raf>? Raflar { get; set; }
+        public Blok Blok { get; set; }
+        public Raf Raf { get; set; }
         public Urun Urun { get; set; }
 
 
