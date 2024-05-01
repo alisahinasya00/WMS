@@ -7,8 +7,8 @@ namespace Infrastructure.Utilities.ApiResponses
 
         public T Data { get; set; }
 
-       // [JsonIgnore]  // Bu sınıf nesnesi oluşturulup bir json a convert edildiğinde
-                      // bu property seriliaze edilip json içeriğine alınmayacak
+        // [JsonIgnore]  // Bu sınıf nesnesi oluşturulup bir json a convert edildiğinde
+        // bu property seriliaze edilip json içeriğine alınmayacak
         public int StatusCode { get; set; }
         public List<string> ErrorMessages { get; set; }
 
@@ -20,7 +20,7 @@ namespace Infrastructure.Utilities.ApiResponses
                 Data = data
             };
         }
-        public static ApiResponse<T> Success(int statusCode, global::WMS.Model.Entities.Islem insertedIslem)
+        public static ApiResponse<T> Success(int statusCode)
         {
             return new ApiResponse<T>
             {
@@ -46,9 +46,6 @@ namespace Infrastructure.Utilities.ApiResponses
             };
         }
 
-        public static ApiResponse<NoData> Success(int status200OK)
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }
