@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AutoMapper;
+using WMS.Model.Dtos.IadeIslem;
+using WMS.Model.Entities;
 
 namespace WMS.Business.Profiles
 {
-    internal class IadeIslemProfile
+    public class IadeIslemProfile : Profile
     {
+        public IadeIslemProfile() {
+            CreateMap<IadeIslem, IadeIslemGetDto>();
+            CreateMap<IadeIslemPutDto, IadeIslem>();
+            CreateMap<IadeIslemPostDto, IadeIslem>();
+        }
     }
 }
