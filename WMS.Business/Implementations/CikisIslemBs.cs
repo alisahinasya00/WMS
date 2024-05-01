@@ -51,7 +51,7 @@ namespace WMS.Business.Implementations
             var calisan = await _repo.IdGoreGetir(cikisIslemId, includeList);
             if (calisan != null)
             {
-                var dto = _mapper.Map<CalisanGetDto>(calisan);
+                var dto = _mapper.Map<CikisIslemGetDto>(calisan);
                 return ApiResponse<CikisIslemGetDto>.Success(StatusCodes.Status200OK, dto);
             }
 
