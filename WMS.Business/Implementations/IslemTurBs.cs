@@ -1,17 +1,9 @@
 ﻿using AutoMapper;
-using Infrastructure.Model;
 using Infrastructure.Utilities.ApiResponses;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WMS.Business.CustomExceptions;
 using WMS.Business.Interfaces;
 using WMS.DataAccess.Interfaces;
-using WMS.Model.Dtos.GirisIslem;
-using WMS.Model.Dtos.Islem;
 using WMS.Model.Dtos.IslemTur;
 using WMS.Model.Entities;
 
