@@ -9,6 +9,7 @@ namespace WMS.Model.Entities
         public string? RafAdi { get; set; }
         public List<Bolme>? Bolmeler { get; set; }
         public Blok Blok { get; set; }
-        public Konum Konum { get; set; }
+        //public Konum? Konum { get; set; }
+        public List<Konum?> Konumlar { get; set; }
     }
 }

@@ -12,8 +12,8 @@ namespace WMS.Model.Entities
 
         public Raf? Raf { get; set; }
         public Blok? Blok { get; set; }
-        public Konum? Konum { get; set; }
+        //public Konum? Konum{ get; set; }
 
-
+        public List<Konum?> Konumlar { get; set; }
     }
 }
