@@ -14,7 +14,7 @@ namespace WMS.Model.Entities
 
         public Calisan Calisan { get; set; }
         public Fabrika Fabrika { get; set; }
-        public IslemTur IslemTur { get; set; }
+        public List<IslemTur>? IslemTurler { get; set; }
         public Urun Urun { get; set; }
     }
 }

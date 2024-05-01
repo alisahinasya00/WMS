@@ -11,9 +11,7 @@ namespace WMS.Model.Entities
         public int CalisanID { get; set; }
         public int UrunAdedi { get; set; }
         public DateTime IslemTarihi { get; set; }
-
-       // public IslemTur? IslemTur { get; set; }
-       // public IadeIslem? IadeIslem { get; set; }
+        public List<IslemTur>? IslemTurler { get; set; }
         public Magaza? Magaza { get; set; }
         public Calisan? Calisan { get; set; }
         public Urun Urun { get; set; }
