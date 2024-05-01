@@ -16,6 +16,7 @@ namespace WMS.Model.Entities
        // public IadeIslem? IadeIslem { get; set; }
         public Magaza? Magaza { get; set; }
         public Calisan? Calisan { get; set; }
+        public Urun Urun { get; set; }
 
     }
 }
