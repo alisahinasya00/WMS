@@ -14,6 +14,24 @@ namespace WMS.Business
         {
             services.AddAutoMapper(typeof(RolProfile));
 
+            services.AddScoped<IBlokBs, BlokBs>();
+            services.AddScoped<IBlokRepository, BlokRepository>();
+
+            services.AddScoped<IBolmeBs, BolmeBs>();
+            services.AddScoped<IBolmeRepository, BolmeRepository>();
+
+            services.AddScoped<ICikisIslemBs, CikisIslemBs>();
+            services.AddScoped<ICikisIslemRepository, CikisIslemRepository>();
+
+            services.AddScoped<IFabrikaBs, FabrikaBs>();
+            services.AddScoped<IFabrikaRepository, FabrikaRepository>();
+
+            services.AddScoped<IGirisIslemBs, GirisIslemBs>();
+            services.AddScoped<IGirisIslemRepository, GirisIslemRepository>();
+
+            services.AddScoped<IIadeIslemBs, IadeIslemBs>();
+            services.AddScoped<IIadeIslemRepository, IadeIslemRepository>();
+
             services.AddScoped<IRolBs, RolBs>();
             services.AddScoped<IRolRepository, RolRepository>();
 
