@@ -20,7 +20,7 @@ namespace WMS.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetIadeIslemler()
         {
-            var response = await _iadeIslemBs.GetIadeIslemlerAsync();
+            var response = await _iadeIslemBs.GetIadeIslemlerAsync("Urun" ,"IslemTur", "Magaza", "Calisan");
             return await SendResponseAsync(response);
         }
 
@@ -28,14 +28,14 @@ namespace WMS.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> IdGoreGetir([FromRoute] int id)
         {
-            var response = await _iadeIslemBs.IdGoreIadeIslemGetirAsync(id);
+            var response = await _iadeIslemBs.IdGoreIadeIslemGetirAsync(id, "Urun", "IslemTur", "Magaza", "Calisan");
             return await SendResponseAsync(response);
         }
 
         [HttpGet("Tarih")]
         public async Task<IActionResult> TariheGoreGetir([FromQuery] DateTime baslangic, [FromQuery] DateTime bitis)
         {
-            var response = await _iadeIslemBs.TariheGoreIadeIslemGetirAsync(baslangic, bitis);
+            var response = await _iadeIslemBs.TariheGoreIadeIslemGetirAsync(baslangic, bitis, "Urun", "IslemTur", "Magaza", "Calisan");
             return await SendResponseAsync(response);
         }
 

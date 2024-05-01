@@ -20,7 +20,7 @@ namespace WMS.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetKonumlar()
         {
-            var response = await _konumBs.GetKonumlarAsync();
+            var response = await _konumBs.GetKonumlarAsync("Blok", "Bolme", "Raf");
             return await SendResponseAsync(response);
         }
 
@@ -28,13 +28,13 @@ namespace WMS.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> IdGoreGetir([FromRoute] int id)
         {
-            var response = await _konumBs.IdGoreKonumGetirAsync(id);
+            var response = await _konumBs.IdGoreKonumGetirAsync(id, "Blok", "Bolme", "Raf");
             return await SendResponseAsync(response);
         }
 
 
         [HttpPut]
-        public async Task<IActionResult> UpdateCalisan([FromBody] KonumPutDto dto)
+        public async Task<IActionResult> UpdateKonum([FromBody] KonumPutDto dto)
         {
             var response = await _konumBs.UpdateAsync(dto);
 
@@ -42,7 +42,7 @@ namespace WMS.WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCalisan(int id)
+        public async Task<IActionResult> DeleteKonum(int id)
         {
             var response = await _konumBs.DeleteAsync(id);
 
@@ -50,7 +50,7 @@ namespace WMS.WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveNewCalisan([FromBody] KonumPostDto dto)
+        public async Task<IActionResult> SaveNewKonum([FromBody] KonumPostDto dto)
         {
             var response = await _konumBs.InsertAsync(dto);
             if (response.ErrorMessages != null && response.ErrorMessages.Count > 0)

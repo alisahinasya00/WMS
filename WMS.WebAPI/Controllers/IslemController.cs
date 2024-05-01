@@ -21,21 +21,21 @@ namespace WMS.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> IdGoreGetir([FromRoute] int id)
         {
-            var response = await _islemBs.IdGoreIslemGetir(id);
+            var response = await _islemBs.IdGoreIslemGetir(id, "IslemTur");
             return await SendResponseAsync(response);
         }
 
         [HttpGet]
         public async Task<IActionResult> GetIslem()
         {
-            var response = await _islemBs.IslemleriGetir();
+            var response = await _islemBs.IslemleriGetir("IslemTur");
             return await SendResponseAsync(response);
         }
 
         [HttpGet("Tarih")]
         public async Task<IActionResult> TariheGoreGetir([FromQuery] DateTime baslangic, [FromQuery] DateTime bitis)
         {
-            var response = await _islemBs.TariheGoreIslemGetir(baslangic, bitis);
+            var response = await _islemBs.TariheGoreIslemGetir(baslangic, bitis, "IslemTur");
             return await SendResponseAsync(response);
         }
 

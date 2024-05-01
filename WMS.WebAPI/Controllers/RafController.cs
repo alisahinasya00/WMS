@@ -20,7 +20,7 @@ namespace WMS.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetRaflar()
         {
-            var response = await _rafBs.GetRaflarAsync();
+            var response = await _rafBs.GetRaflarAsync("Raf");
             return await SendResponseAsync(response);
         }
 
@@ -28,14 +28,14 @@ namespace WMS.WebAPI.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> IdGoreGetir([FromRoute] int id)
         {
-            var response = await _rafBs.IdGoreRafGetirAsync(id);
+            var response = await _rafBs.IdGoreRafGetirAsync(id, "Raf");
             return await SendResponseAsync(response);
         }
 
         [HttpGet("İsim")]
         public async Task<IActionResult> IsmeGoreGetir([FromQuery] string isim)
         {
-            var response = await _rafBs.IsimGoreRafGetirAsync(isim);
+            var response = await _rafBs.IsimGoreRafGetirAsync(isim, "Raf");
             return await SendResponseAsync(response);
         }
 

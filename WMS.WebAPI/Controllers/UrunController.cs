@@ -20,28 +20,28 @@ namespace WMS.WebAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetUrunler()
         {
-            var response = await _urunBs.GetUrunlerAsync();
+            var response = await _urunBs.GetUrunlerAsync("Kategori");
             return await SendResponseAsync(response);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> IdGoreGetir([FromRoute] int id)
         {
-            var response = await _urunBs.IdGoreUrunGetirAsync(id);
+            var response = await _urunBs.IdGoreUrunGetirAsync(id, "Kategori");
             return await SendResponseAsync(response);
         }
 
         [HttpGet("İsim")]
         public async Task<IActionResult> IsmeGoreGetir([FromQuery] string isim)
         {
-            var response = await _urunBs.IsimGoreUrunGetirAsync(isim);
+            var response = await _urunBs.IsimGoreUrunGetirAsync(isim, "Kategori");
             return await SendResponseAsync(response);
         }
 
         [HttpGet("Tarih")]
         public async Task<IActionResult> TariheGoreGetir([FromQuery] DateTime baslangic, [FromQuery] DateTime bitis)
         {
-            var response = await _urunBs.KayitTariheGoreUrunGetirAsync(baslangic, bitis);
+            var response = await _urunBs.KayitTariheGoreUrunGetirAsync(baslangic, bitis, "Kategori");
             return await SendResponseAsync(response);
         }
 
