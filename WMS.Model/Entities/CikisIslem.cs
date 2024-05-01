@@ -6,7 +6,7 @@ namespace WMS.Model.Entities
     {
         public int CikisIslemId { get; set; }
         public int UrunID { get; set; }
-        public int IslemTuruID { get;set; }
+        public int IslemTurID { get;set; }
         public int MagazaID { get; set; }
         public int CalisanID { get; set; }
         public int UrunAdedi { get; set; }
@@ -17,6 +17,8 @@ namespace WMS.Model.Entities
         public Magaza? Magaza { get; set; }
         public Calisan? Calisan { get; set; }
         public Urun Urun { get; set; }
+
+        public List<IslemTur>? IslemTurler { get; set; }
 
     }
 }

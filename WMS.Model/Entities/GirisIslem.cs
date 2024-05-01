@@ -6,7 +6,7 @@ namespace WMS.Model.Entities
     {
         public int GirisIslemId { get; set; }
         public int UrunID { get; set; }
-        public int IslemTuruID { get; set; }
+        public int IslemTurID { get; set; }
         public int FabrikaID { get; set; }
         public int CalisanID { get; set; }
         public int UrunAdedi { get; set; }
