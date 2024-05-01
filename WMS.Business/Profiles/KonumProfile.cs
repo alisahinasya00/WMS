@@ -9,11 +9,11 @@ namespace WMS.Business.Profiles
         public KonumProfile() {
             CreateMap<Konum, KonumGetDto>()
                 .ForMember(dest => dest.BlokAdi,
-                       opt => opt.MapFrom(src => src.Bloklar.BlokAdi))
+                       opt => opt.MapFrom(src => src.Blok.BlokAdi))
                 .ForMember(dest => dest.BolmeAdi,
                        opt => opt.MapFrom(src => src.Bolme.BolmeAdi))
                 .ForMember(dest => dest.RafAdi,
-                           opt => opt.MapFrom(src => src.Raflar.RafAdi));
+                           opt => opt.MapFrom(src => src.Raf.RafAdi));
             CreateMap<KonumPutDto, Konum>();
             CreateMap<KonumPostDto, Konum>();
         }
