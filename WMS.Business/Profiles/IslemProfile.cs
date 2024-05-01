@@ -7,7 +7,9 @@ namespace WMS.Business.Profiles
     public class IslemProfile : Profile
     {
         public IslemProfile() {
-            CreateMap<Islem, IslemGetDto>();
+            CreateMap<Islem, IslemGetDto>()
+                .ForMember(dest => dest.IslemAdi,
+                       opt => opt.MapFrom(src => src.IslemTur.IslemAdi));
             CreateMap<IslemPutDto, Islem>();
             CreateMap<IslemPostDto, Islem>();
         }
