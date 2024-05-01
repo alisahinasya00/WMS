@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using WMS.Business.Implementations;
 using WMS.Business.Interfaces;
 using WMS.Model.Dtos.Urun;
 
@@ -30,6 +31,13 @@ namespace WMS.WebAPI.Controllers
             return await SendResponseAsync(response);
         }
 
+        [HttpGet("İsim")]
+        public async Task<IActionResult> IsmeGoreGetir([FromQuery] string isim)
+        {
+            var response = await _urunBs.IsimGoreUrunGetirAsync(isim);
+            return await SendResponseAsync(response);
+        }
+
         [HttpGet("Tarih")]
         public async Task<IActionResult> TariheGoreGetir([FromQuery] DateTime baslangic, [FromQuery] DateTime bitis)
         {
@@ -40,7 +48,7 @@ namespace WMS.WebAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> SaveUrun([FromBody] UrunPostDto dto)
         {
-            var response = await _urunBs.Insert(dto);
+            var response = await _urunBs.InsertAsync(dto);
             if (response.ErrorMessages != null && response.ErrorMessages.Count > 0)
             {
                 return await SendResponseAsync(response);
@@ -52,7 +60,7 @@ namespace WMS.WebAPI.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateUrun([FromBody] UrunPutDto dto)
         {
-            var response = await _urunBs.Update(dto);
+            var response = await _urunBs.UpdateAsync(dto);
 
             return await SendResponseAsync(response);
         }
@@ -60,7 +68,7 @@ namespace WMS.WebAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCalisan(int id)
         {
-            var response = await _urunBs.Delete(id);
+            var response = await _urunBs.DeleteAsync(id);
 
             return await SendResponseAsync(response);
         }
