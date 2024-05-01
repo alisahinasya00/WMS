@@ -41,7 +41,7 @@ namespace WMS.WebAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateCalisan([FromBody] BlokPutDto dto)
+        public async Task<IActionResult> UpdateBlok([FromBody] BlokPutDto dto)
         {
             var response = await _blokBs.UpdateAsync(dto);
 
@@ -49,7 +49,7 @@ namespace WMS.WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCalisan(int id)
+        public async Task<IActionResult> DeleteBlok(int id)
         {
             var response = await _blokBs.DeleteAsync(id);
 
@@ -57,7 +57,7 @@ namespace WMS.WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveNewCalisan([FromBody] BlokPostDto dto)
+        public async Task<IActionResult> SaveNewBlok([FromBody] BlokPostDto dto)
         {
             var response = await _blokBs.InsertAsync(dto);
             if (response.ErrorMessages != null && response.ErrorMessages.Count > 0)
