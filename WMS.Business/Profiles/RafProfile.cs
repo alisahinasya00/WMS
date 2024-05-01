@@ -7,7 +7,9 @@ namespace WMS.Business.Profiles
     public class RafProfile : Profile
     {
         public RafProfile() {
-            CreateMap<Raf, RafGetDto>();
+            CreateMap<Raf, RafGetDto>()
+                .ForMember(dest => dest.BlokAdi,
+                       opt => opt.MapFrom(src => src.Blok.BlokAdi));
             CreateMap<RafPutDto, Raf>();
             CreateMap<RafPostDto, Raf>();
         }
