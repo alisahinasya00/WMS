@@ -12,15 +12,15 @@ namespace WMS.DataAccess.EF.Repositories
 {
     public class MagazaRepository : BaseRepository<Magaza, WMSDbContext>, IMagazaRepository
     {
-        public async Task<Magaza> AdaGoreGetir(string magazaAdi, params string[] includeList)
+        public async Task<List<Magaza>> AdaGoreGetir(string magazaAdi, params string[] includeList)
         {
-            return await GetAsync(mgz => mgz.MagazaAdi.Contains(magazaAdi), includeList);
+            return await GetAllAsync(mgz => mgz.MagazaAdi.Contains(magazaAdi), includeList);
 
         }
 
-        public async Task<Magaza> AdreseGoreGetir(string adres, params string[] includeList)
+        public async Task<List<Magaza>> AdreseGoreGetir(string adres, params string[] includeList)
         {   
-            return await GetAsync(urun => urun.Adres == adres, includeList);
+            return await GetAllAsync(urun => urun.Adres == adres, includeList);
         }
 
         public async Task<Magaza> IdGoreGetir(int magazaId, params string[] includeList)
