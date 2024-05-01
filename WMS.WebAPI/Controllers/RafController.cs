@@ -40,7 +40,7 @@ namespace WMS.WebAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateCalisan([FromBody] RafPutDto dto)
+        public async Task<IActionResult> UpdateRaf([FromBody] RafPutDto dto)
         {
             var response = await _rafBs.UpdateAsync(dto);
 
@@ -48,7 +48,7 @@ namespace WMS.WebAPI.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteCalisan(int id)
+        public async Task<IActionResult> DeleteRaf(int id)
         {
             var response = await _rafBs.DeleteAsync(id);
 
@@ -56,7 +56,7 @@ namespace WMS.WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> SaveNewCalisan([FromBody] RafPostDto dto)
+        public async Task<IActionResult> SaveNewRaf([FromBody] RafPostDto dto)
         {
             var response = await _rafBs.InsertAsync(dto);
             if (response.ErrorMessages != null && response.ErrorMessages.Count > 0)
