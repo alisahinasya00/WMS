@@ -11,7 +11,6 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Calisan\Data\" />
     <Folder Include="Areas\Calisan\Models\" />
-    <Folder Include="Areas\Calisan\Views\" />
     <Folder Include="Areas\Magaza\Data\" />
     <Folder Include="Areas\Magaza\Models\" />
     <Folder Include="Areas\Magaza\Views\" />

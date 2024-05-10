@@ -46,7 +46,7 @@
                 <div class="login-container">
                     <h2 class="login-title">Hoşgeldiniz</h2>
                     <button class="btn btn-primary btn-block login-button" onclick="openLoginForm('store')">Mağaza Girişi</button>
-                    <button class="btn btn-primary btn-block login-button" onclick="openLoginForm('employee')">Çalışan Girişi</button>
+                    <button id="calisanButton" class="btn btn-primary btn-block login-button" onclick="openLoginForm('calisan')">Çalışan Girişi</button>
                     <button id="adminButton" class="btn btn-primary btn-block login-button" onclick="openLoginForm('admin')">Yönetici Girişi</button>
                 </div>
             </div>
@@ -65,6 +65,11 @@
         document.getElementById('adminButton').addEventListener('click', function () {
             console.log("Yönetici girişi butonuna tıklandı.");
             window.location.href = '/Admin/AdminLogin'; // Yönetici girişi için uygun URL
+        });
+
+        document.getElementById('calisanButton').addEventListener('click', function () {
+            console.log("Calisan girişi butonuna tıklandı.");
+            window.location.href = '/Calisan/CalisanLogin'; // Yönetici girişi için uygun URL
         });
     </script>
 </body>

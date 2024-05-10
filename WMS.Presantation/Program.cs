@@ -25,6 +25,10 @@ app.MapControllerRoute(
     pattern: "{area}/{controller=AdminLogin}/{action=AdminLogin}/{id?}");
 
 app.MapControllerRoute(
+    name: "calisan",
+    pattern: "{area}/{controller=CalisanLogin}/{action=CalisanLogin}/{id?}");
+
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Login}/{action=Login}/{id?}");
 
