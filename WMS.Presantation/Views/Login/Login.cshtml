@@ -45,7 +45,7 @@
             <div class="col-md-6 offset-md-3">
                 <div class="login-container">
                     <h2 class="login-title">Hoşgeldiniz</h2>
-                    <button class="btn btn-primary btn-block login-button" onclick="openLoginForm('store')">Mağaza Girişi</button>
+                    <button id="magazaButton" class="btn btn-primary btn-block login-button" onclick="openLoginForm('store')">Mağaza Girişi</button>
                     <button id="calisanButton" class="btn btn-primary btn-block login-button" onclick="openLoginForm('calisan')">Çalışan Girişi</button>
                     <button id="adminButton" class="btn btn-primary btn-block login-button" onclick="openLoginForm('admin')">Yönetici Girişi</button>
                 </div>
@@ -70,6 +70,11 @@
         document.getElementById('calisanButton').addEventListener('click', function () {
             console.log("Calisan girişi butonuna tıklandı.");
             window.location.href = '/Calisan/CalisanLogin'; // Yönetici girişi için uygun URL
+        });
+
+        document.getElementById('magazaButton').addEventListener('click', function () {
+            console.log("Magaza girişi butonuna tıklandı.");
+            window.location.href = '/Magaza/MagazaLogin'; // Yönetici girişi için uygun URL
         });
     </script>
 </body>

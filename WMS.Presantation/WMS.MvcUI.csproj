@@ -13,7 +13,6 @@
     <Folder Include="Areas\Calisan\Models\" />
     <Folder Include="Areas\Magaza\Data\" />
     <Folder Include="Areas\Magaza\Models\" />
-    <Folder Include="Areas\Magaza\Views\" />
   </ItemGroup>
 
   <ItemGroup>
