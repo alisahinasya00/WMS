@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Depo Yönetim Sistemi";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 100px;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-button {
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+            .login-button:hover {
+                opacity: 0.8;
+            }
+
+        .login-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="login-container">
+                    <h2 class="login-title">Hoşgeldiniz</h2>
+                    <button class="btn btn-primary btn-block login-button" onclick="openLoginForm('store')">Mağaza Girişi</button>
+                    <button class="btn btn-primary btn-block login-button" onclick="openLoginForm('employee')">Çalışan Girişi</button>
+                    <button class="btn btn-primary btn-block login-button" onclick="openLoginForm('admin')">Yönetici Girişi</button>
+                    <form class="login-form" id="loginForm">
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder="E-posta" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="Şifre" required />
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript -->
+    <script>
+        function openLoginForm(userType) {
+            document.querySelectorAll('.login-form').forEach(form => form.style.display = 'none');
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('loginForm').action = '/' + userType + '/login'; // Burada her kullanıcı türü için uygun yönlendirme yapabilirsiniz.
+        }
+    </script>
+</body>
+</html>

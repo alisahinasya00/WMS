@@ -7,22 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\" />
-    <Folder Include="Areas\Calisan\Controllers\" />
     <Folder Include="Areas\Calisan\Data\" />
     <Folder Include="Areas\Calisan\Models\" />
     <Folder Include="Areas\Calisan\Views\" />
-    <Folder Include="Areas\Magaza\Controllers\" />
     <Folder Include="Areas\Magaza\Data\" />
     <Folder Include="Areas\Magaza\Models\" />
     <Folder Include="Areas\Magaza\Views\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.3.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
   </ItemGroup>
 
