@@ -1,8 +1,4 @@
-﻿@{
-    ViewBag.Title = "Depo Yönetim Sistemi";
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -41,9 +37,6 @@
                 opacity: 0.8;
             }
 
-        .login-form {
-            display: none;
-        }
     </style>
 </head>
 <body>
@@ -54,16 +47,7 @@
                     <h2 class="login-title">Hoşgeldiniz</h2>
                     <button class="btn btn-primary btn-block login-button" onclick="openLoginForm('store')">Mağaza Girişi</button>
                     <button class="btn btn-primary btn-block login-button" onclick="openLoginForm('employee')">Çalışan Girişi</button>
-                    <button class="btn btn-primary btn-block login-button" onclick="openLoginForm('admin')">Yönetici Girişi</button>
-                    <form class="login-form" id="loginForm">
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="E-posta" required />
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="password" placeholder="Şifre" required />
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
-                    </form>
+                    <button id="adminButton" class="btn btn-primary btn-block login-button" onclick="openLoginForm('admin')">Yönetici Girişi</button>
                 </div>
             </div>
         </div>
@@ -74,10 +58,14 @@
     <!-- JavaScript -->
     <script>
         function openLoginForm(userType) {
-            document.querySelectorAll('.login-form').forEach(form => form.style.display = 'none');
-            document.getElementById('loginForm').style.display = 'block';
-            document.getElementById('loginForm').action = '/' + userType + '/login'; // Burada her kullanıcı türü için uygun yönlendirme yapabilirsiniz.
+            window.location.href = '/' + userType + '/login'; // Burada her kullanıcı türü için uygun yönlendirme yapabilirsiniz.
         }
+
+        // Yönetici girişi butonunu AdminLogin.cshtml sayfasına yönlendir
+        document.getElementById('adminButton').addEventListener('click', function () {
+            console.log("Yönetici girişi butonuna tıklandı.");
+            window.location.href = '/Admin/AdminLogin'; // Yönetici girişi için uygun URL
+        });
     </script>
 </body>
 </html>
