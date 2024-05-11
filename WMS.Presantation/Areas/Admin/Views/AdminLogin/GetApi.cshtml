@@ -1,0 +1,10 @@
+﻿@using WMS.MvcUI.Areas.Admin.Models
+@model List<Calisan> 
+@foreach (var item in Model)
+{
+    <div> 
+        <p> İsim= @item.Adi</p>
+        <p> Mail= @item.Mail</p>
+        <p> Şifre= @item.Sifre</p>
+    </div>
+}
