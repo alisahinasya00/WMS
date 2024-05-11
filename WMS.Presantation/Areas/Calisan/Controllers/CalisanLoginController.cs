@@ -14,7 +14,7 @@ namespace WMS.MvcUI.Areas.Calisan.Controllers
 
         public CalisanLoginController(ILogger<CalisanLoginController> logger)
         {
-            _logger=logger;
+            _logger = logger;
         }
         private async Task<List<CalisanModel>> GetCalisanFromApi()
         {
