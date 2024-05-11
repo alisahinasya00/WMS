@@ -1,6 +1,6 @@
 ﻿namespace WMS.MvcUI.Areas.Calisan.Models
 {
-    public class Calisan
+    public class CalisanModel
     {
         public int CalisanId { get; set; }
         public string Adi { get; set; }
