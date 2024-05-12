@@ -52,10 +52,10 @@ namespace WMS.MvcUI.Areas.Magaza.Controllers
 		public async Task<IActionResult> MagazaLogin(string username, string password)
 		{
 			List<MagazaModel> magazalar = await GetMagazaFromApi();
-			var users = magazalar.FirstOrDefault(magaza => magaza.Mail == username && magaza.Sifre == password && magaza.RolAdi == "Magaza");
+			var users = magazalar.FirstOrDefault(magaza => magaza.Mail == username && magaza.Sifre == password);
 			if (users != null)
 			{
-				TempData["UserName"] = users.Adi;
+				TempData["UserName"] = users.MagazaAdi;
 				return RedirectToAction("MagazaPage", "MagazaPage");
 			}
 			else

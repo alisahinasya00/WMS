@@ -3,7 +3,7 @@
 	public class MagazaModel
 	{
 		public int MagazaId { get; set; }
-		public string Adi { get; set; }
+		public string MagazaAdi { get; set; }
 		public string Soyadi { get; set; }
 		public int Maas { get; set; }
 		public string TelefonNo { get; set; }
