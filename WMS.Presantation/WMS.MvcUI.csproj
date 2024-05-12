@@ -10,7 +10,6 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Calisan\Data\" />
     <Folder Include="Areas\Magaza\Data\" />
-    <Folder Include="Areas\Magaza\Models\" />
   </ItemGroup>
 
   <ItemGroup>

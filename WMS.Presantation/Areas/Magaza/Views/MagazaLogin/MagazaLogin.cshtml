@@ -33,6 +33,11 @@
             padding: 10px;
             border-radius: 5px;
         }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -41,15 +46,19 @@
             <div class="col-md-6 offset-md-3">
                 <div class="login-container">
                     <h2 class="login-title">Mağaza Giriş</h2>
-                    <form action="/Magaza/Login" method="POST">
+                    <form action="/Magaza/MagazaLogin" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="username" name="username" placeholder="Kullanıcı Adı" required>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Mağaza Adı" required>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" id="password" name="password" placeholder="Şifre" required>
                         </div>
                         <button type="submit" class="btn btn-primary btn-block login-button">Giriş Yap</button>
                     </form>
+                    @if (ViewData["ErrorMessage"] != null)
+                    {
+                        <div class="error-message">@ViewData["ErrorMessage"]</div>
+                    }
                 </div>
             </div>
         </div>
