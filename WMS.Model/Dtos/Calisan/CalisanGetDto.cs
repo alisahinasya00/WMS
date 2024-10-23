@@ -18,7 +18,6 @@ namespace WMS.Model.Dtos.Calisan
         public string Mail { get; set; }
         public string Sifre { get; set; }
         public DateTime IseGirisTarihi { get; set; }
-        //public int RolId { get; set; }
         public string RolAdi { get; set; }
 
     }
