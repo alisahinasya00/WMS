@@ -1,10 +1,5 @@
-using WMS.Business.Implementations;
-using WMS.Business.Interfaces;
-using WMS.Business.Profiles;
-using WMS.DataAccess.EF.Repositories;
-using WMS.DataAccess.Interfaces;
-using WMS.Business;
 using System.Text.Json.Serialization;
+using WMS.Business;
 
 namespace WMS.WebAPI
 {
