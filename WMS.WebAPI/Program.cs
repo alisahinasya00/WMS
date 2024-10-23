@@ -15,6 +15,18 @@ namespace WMS.WebAPI
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllers().
                 AddJsonOptions(opt => opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
+
+            // Add CORS policy to allow requests from http://localhost:5173
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowViteFrontend",
+                    policy =>
+                    {
+                        policy.WithOrigins("http://localhost:5173")
+                              .AllowAnyHeader()
+                              .AllowAnyMethod();
+                    });
+            });
             builder.Services.AddBusinessServices();
 
             // Add services to the container.
@@ -24,6 +36,8 @@ namespace WMS.WebAPI
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
+
+            app.UseCors("AllowViteFrontend");
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
